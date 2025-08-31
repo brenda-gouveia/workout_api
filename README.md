@@ -70,6 +70,55 @@ e acesse: http://127.0.0.1:8000/docs
         - status_code: 303
     - Adicionar paginação utilizando a lib: fastapi-pagination
         - limit e offset
+
+# Futuras implementações
+
+1. Ranking de Atletas
+
+    Funcionalidade: Gerar um ranking dos atletas baseado em performances registradas (pontuação, tempo, etc).
+    Como implementar: Adicionar uma tabela/modelo para “Resultados” ou “Performances” e criar endpoints para consulta de rankings por categoria, centro de treinamento, ou geral.
+
+2. Gestão de Competição/Eventos
+
+    Funcionalidade: Permitir o cadastro de eventos/competições (WODs, campeonatos, etc), vinculando atletas e resultados.
+    Como implementar: Criar modelos para “Evento” e “Resultado”, relacionando com atletas e categorias. Permitir cadastro, edição, e consulta desses eventos.
+
+3. Autenticação e Autorização
+
+    Funcionalidade: Adicionar login/logout para usuários (admin, coach, atleta), com permissões diferenciadas.
+    Como implementar: Integrar OAuth2/JWT ao FastAPI, criar rotas protegidas e papéis de usuário.
+
+4. Histórico e Evolução do Atleta
+
+    Funcionalidade: Registrar histórico de treinos, resultados e evolução dos atletas.
+    Como implementar: Criar endpoints que permitam consultar, adicionar e atualizar registros históricos, apresentando gráficos ou relatórios.
+
+5. Upload de Fotos/Documentos
+
+    Funcionalidade: Permitir que atletas ou centros de treinamento adicionem fotos de perfil, comprovantes, etc.
+    Como implementar: Usar FastAPI para upload de arquivos, armazenando em disco ou em cloud storage (S3, etc).
+
+6. Notificações por Email ou Push
+
+    Funcionalidade: Enviar notificações sobre novos eventos, resultados, ou mudanças de status do atleta.
+    Como implementar: Integrar um sistema de envio de emails (SMTP) ou push notifications para dispositivos.
+
+7. Filtros Avançados e Relatórios
+
+    Funcionalidade: Permitir consultas avançadas com múltiplos filtros (idade, sexo, categoria, centro, data de evento, etc), e exportação de relatórios em PDF ou CSV.
+
+8. Dashboard Estatístico
+
+    Funcionalidade: Criar endpoints que retornem estatísticas para visualização em dashboards (quantidade de atletas por categoria, evolução de resultados, etc).
+
+9. Integração com APIs externas (ex: WODs do Crossfit.com)
+
+    Funcionalidade: Buscar e sugerir treinos (WODs) de bases externas, integrando dados via API.
+
+10. Sistema de Feedback/Avaliação
+
+    Funcionalidade: Permitir que atletas avaliem eventos, centros de treinamento, ou até outros atletas.
+
 # Referências
 
 FastAPI: https://fastapi.tiangolo.com/
